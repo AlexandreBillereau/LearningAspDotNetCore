@@ -6,10 +6,12 @@ public class Category
 {
   [Key]
   public int ID { get; set; }
+  [Required]
   public string Name { get; set; }
   public int DisaplayOrder { get; set; }
   public DateTime createDateTime { get; set; } = DateTime.Now;
   
-
+  
+  
  }
 
