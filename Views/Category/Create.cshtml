@@ -10,12 +10,14 @@
             <hr />
         </div>
         <div class="mb-3">
-        <label asp-for="@Model.Name">Name</label>
-        <input asp-for="@Model.Name" class="form-control"/>
+            <label asp-for="@Model.Name">Name</label>
+            <input asp-for="@Model.Name" class="form-control"/>
+            <span asp-validation-for="Name" class="alert-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="@Model.DisaplayOrder">Display Order</label>
             <input asp-for="@Model.DisaplayOrder" class="form-control"/>
+            <span asp-validation-for="DisaplayOrder" class="alert-danger"></span>
         </div>
         <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
         <a asp-controller="Category" asp-action="Index" class="btn btn-dark" style="width:150px">back to List</a>
