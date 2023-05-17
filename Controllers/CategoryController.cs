@@ -1,4 +1,5 @@
 ﻿using BulkyBook.Data;
+using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Xml.Linq;
 
@@ -14,7 +15,7 @@ public class CategoryController : Controller
 
   public IActionResult Index()
   {
-    var objCategoryList = _db.categories.ToList();
-    return View();
+    IEnumerable<Category> objCategoryList = _db.categories;
+    return View(objCategoryList);
   }
 }
