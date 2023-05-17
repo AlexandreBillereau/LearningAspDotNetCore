@@ -1,0 +1,23 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2>Create Category</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+        <label asp-for="@Model.Name">Name</label>
+        <input asp-for="@Model.Name" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="@Model.DisaplayOrder">Display Order</label>
+            <input asp-for="@Model.DisaplayOrder" class="form-control"/>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+        <a asp-controller="Category" asp-action="Index" class="btn btn-dark" style="width:150px">back to List</a>
+    </div>
+</form>
